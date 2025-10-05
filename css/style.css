@@ -1,0 +1,229 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    background-color: #000000;
+    color: #F5F5F5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #FFD700;
+    padding: 10px;
+    margin: 0px;
+}
+.navbar a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    display: inline-block; 
+
+}
+.navbar a:hover {
+    transform: scale(1.1);
+
+}
+
+.profile-img {
+  width: 120px; 
+  height: 120px;
+  border-radius: 10%; 
+  object-fit: cover; 
+  margin: 20px 10px;
+}
+.intro-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+
+}
+.intro-text-right {
+    flex: 1;
+    margin: 0 0;
+    
+}
+.text {
+    font-size: 1.2em; 
+    line-height: 1.6; 
+    margin: 10px 0; 
+    color: #D3D3D3; 
+    display: inline-block;
+    transition: color 0.3s ease; 
+    font-family: Times New Roman;
+}
+.text:hover {
+    color: #00bbff; 
+}
+.text::first-letter {
+    font-size: 3em;      
+    font-weight: bold;
+    color: #007BFF; 
+    float: left;   
+    line-height: 0.8;
+    margin-right: 8px;
+}
+.cv-text {
+    font-family: Times New Roman;
+    font-size: 1.2em; 
+    line-height: 1.6; 
+    margin: 0 0; 
+    color: #D3D3D3; 
+    display: inline-block;
+    transition: color 0.3s ease; 
+}
+.cv-text:hover {
+    color: #00bbff; 
+}
+.on-text a{
+    color: #7b00ff;
+}
+li{
+    font-family: Times New Roman;
+    margin: 5px 5px;
+}
+li:hover {
+    color: #00ff59; 
+}
+.portfolio-content {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 30px;
+}
+.project-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+}
+.project-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.project-link {
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: #FFD700;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.project-link:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    background-color: #121212;
+    color: #F5F5F5;
+    padding: 10px 0 0px;
+    margin-top: 100px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+.footer h3 {
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+.social-links li {
+    margin-bottom: 10px;
+}
+.social-links a {
+    color: #F5F5F5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: #FFD700;
+}
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+
+
+@media (min-width: 375px) {
+    body{
+        font-size: 18px;
+    }
+    .profile-img {
+        width: 170px; 
+        height: 170px;
+    }
+    .intro-text-right {
+        margin: 10px 0;
+    }
+}
+@media (min-width: 768px) {
+    body{
+        font-size: 20px;
+    }
+    .profile-img {
+        width: 200px; 
+        height: 200px;
+    }
+    .intro-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .intro-text-right {
+        margin: 20px 0;
+    }
+    .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-content {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+@media (min-width:1024px) {
+    body{
+        font-size: 22px;
+    }
+    .intro-text-right {
+        margin: 30px 0;
+    }
+    .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    }
+}
+ 
